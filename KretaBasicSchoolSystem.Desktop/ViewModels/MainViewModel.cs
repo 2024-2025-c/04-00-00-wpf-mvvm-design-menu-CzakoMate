@@ -4,6 +4,8 @@ using FontAwesome.Sharp;
 using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels
 {
@@ -11,23 +13,27 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
     {
         private ControlPanelViewModel _controlPanelViewModel;
         private SchoolCitizensViewModel _schoolCitizensViewModel;
+        private SchoolClassesViewModel _schoolClassesViewModel;
 
         public MainViewModel()
         {
             _controlPanelViewModel = new ControlPanelViewModel();
             _schoolCitizensViewModel = new SchoolCitizensViewModel();
+            _schoolClassesViewModel = new SchoolClassesViewModel();
         }
 
         public MainViewModel(
             ControlPanelViewModel controlPanelViewModel,
-            SchoolCitizensViewModel schoolCitizensViewModel 
+            SchoolCitizensViewModel schoolCitizensViewModel,
+            SchoolClassesViewModel schoolClassesViewModel
             )
         {
             _controlPanelViewModel = controlPanelViewModel;
             _schoolCitizensViewModel = schoolCitizensViewModel;
+            _schoolClassesViewModel= schoolClassesViewModel;
 
 
-            CurrentChildView = _controlPanelViewModel;
+            //CurrentChildView = _controlPanelViewModel;
             ShowDashbord();
         }
 
