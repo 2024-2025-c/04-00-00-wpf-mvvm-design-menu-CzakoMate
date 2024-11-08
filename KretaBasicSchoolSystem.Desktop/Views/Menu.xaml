@@ -6,6 +6,8 @@
              xmlns:local="clr-namespace:KretaBasicSchoolSystem.Desktop.Views"
              xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
              mc:Ignorable="d" 
+                     xmlns:viewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels"
+        d:DataContext="{d:DesignInstance Type=viewModels:MainViewModel, IsDesignTimeCreatable=True}"
              d:DesignHeight="700" d:DesignWidth="250">
     <StackPanel>
         <Border CornerRadius="0, 50, 40, 30">
@@ -55,10 +57,16 @@
                         </StackPanel>
                     </RadioButton>
                     <RadioButton Style="{StaticResource menuButton}"
-                             Tag="{StaticResource colorMidleGreen}">
+                             Tag="{StaticResource colorMidleGreen}"
+                                 Command="{Biding ShowSchoolClassesCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="ChalkboardUser" Style="{StaticResource menuButtonIcon}"/>
-                            <TextBlock Text="Osztályok" Style="{StaticResource menuButtonText}"/>
+                            <TextBlock Text="Osztályok" 
+                                       Style="{StaticResource menuButtonText}"
+                                        
+                                       
+                                                                        
+                                "/>
                         </StackPanel>
                     </RadioButton>
                     <RadioButton Style="{StaticResource menuButton}"
