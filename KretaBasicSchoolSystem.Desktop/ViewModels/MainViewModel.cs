@@ -5,7 +5,6 @@ using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels
 {
@@ -60,6 +59,14 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             Caption = "Iskolapolgárok";
             Icon = IconChar.UserGroup;
             CurrentChildView = _schoolCitizensViewModel;
+        }
+        //schoolClass menüpont meghívása
+        [RelayCommand]
+        public void ShowSchoolClasses()
+        {
+            Caption = "Osztályok";
+            Icon = IconChar.Chalkboard;
+            CurrentChildView= _schoolClassesViewModel;
         }
     }
 }
