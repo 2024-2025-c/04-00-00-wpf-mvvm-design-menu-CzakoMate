@@ -26,12 +26,14 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
         public MainViewModel(
             ControlPanelViewModel controlPanelViewModel,
             SchoolCitizensViewModel schoolCitizensViewModel,
-            SchoolClassesViewModel schoolClassesViewModel
+            SchoolClassesViewModel schoolClassesViewModel,
+            SchoolSubjectsViewModel schoolSubjectsViewModel
             )
         {
             _controlPanelViewModel = controlPanelViewModel;
             _schoolCitizensViewModel = schoolCitizensViewModel;
             _schoolClassesViewModel= schoolClassesViewModel;
+            _schoolSubjectsViewModel=schoolSubjectsViewModel ;
 
 
             CurrentChildView = _controlPanelViewModel;
