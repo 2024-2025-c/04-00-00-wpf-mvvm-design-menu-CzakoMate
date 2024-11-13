@@ -5,6 +5,7 @@ using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels
 {
@@ -13,6 +14,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
         private ControlPanelViewModel _controlPanelViewModel;
         private SchoolCitizensViewModel _schoolCitizensViewModel;
         private SchoolClassesViewModel _schoolClassesViewModel;
+        private SchoolSubjectsViewModel _schoolSubjectsViewModel;
 
         public MainViewModel()
         {
@@ -67,6 +69,14 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             Caption = "Osztályok";
             Icon = IconChar.Chalkboard;
             CurrentChildView= _schoolClassesViewModel;
+        }
+        //schoolSubjects menüpont meghívása
+        [RelayCommand]
+        public void ShowSchoolSubjects()
+        {
+            Caption = "Tantárgyak";
+            Icon = IconChar.ChalkboardTeacher;
+            CurrentChildView = _schoolSubjectsViewModel;
         }
     }
 }
