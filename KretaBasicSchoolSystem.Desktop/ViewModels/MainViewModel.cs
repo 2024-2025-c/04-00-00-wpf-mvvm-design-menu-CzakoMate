@@ -21,6 +21,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             _controlPanelViewModel = new ControlPanelViewModel();
             _schoolCitizensViewModel = new SchoolCitizensViewModel();
             _schoolClassesViewModel = new SchoolClassesViewModel();
+            _schoolSubjectsViewModel = new SchoolSubjectsViewModel();
         }
 
         public MainViewModel(
