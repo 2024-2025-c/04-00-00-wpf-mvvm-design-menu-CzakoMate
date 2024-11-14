@@ -78,7 +78,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
         public void ShowSchoolSubjects()
         {
             Caption = "Tantárgyak";
-            Icon = IconChar.ChalkboardTeacher;
+            Icon = IconChar.GraduationCap;
             CurrentChildView = _schoolSubjectsViewModel;
         }
     }
