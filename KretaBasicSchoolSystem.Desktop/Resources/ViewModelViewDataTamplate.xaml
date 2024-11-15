@@ -24,5 +24,8 @@
     <DataTemplate DataType="{x:Type schoolSubjectsViewModels:SchoolSubjectsViewModel}">
         <schoolSubjectsView:SchoolSubjectsView></schoolSubjectsView:SchoolSubjectsView>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolCitizensViewModels:TeacherViewModel}">
+        <schoolCitizensView:TeacherView/>
+    </DataTemplate>
 
 </ResourceDictionary>
