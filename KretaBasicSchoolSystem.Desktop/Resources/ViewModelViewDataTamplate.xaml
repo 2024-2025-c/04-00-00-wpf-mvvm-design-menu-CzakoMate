@@ -28,5 +28,8 @@
     <DataTemplate DataType="{x:Type schoolCitizensViewModels:TeacherViewModel}">
         <schoolCitizensView:TeacherView/>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolCitizensViewModels:ParentViewModel}">
+        <schoolCitizensView:ParentView/>
+    </DataTemplate>
 
 </ResourceDictionary>
