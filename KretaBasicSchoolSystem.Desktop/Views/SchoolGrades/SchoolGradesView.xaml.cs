@@ -18,9 +18,9 @@ namespace KretaBasicSchoolSystem.Desktop.Views.SchoolGrades
     /// <summary>
     /// Interaction logic for SchoolGrades.xaml
     /// </summary>
-    public partial class SchoolGrades : UserControl
+    public partial class SchoolGradesView : UserControl
     {
-        public SchoolGrades()
+        public SchoolGradesView()
         {
             InitializeComponent();
         }
