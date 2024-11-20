@@ -1,5 +1,4 @@
-﻿using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,20 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens
 {
     /// <summary>
-    /// Interaction logic for TeacherView.xaml
+    /// Interaction logic for StudentView.xaml
     /// </summary>
-    public partial class TeacherView : UserControl
+    public partial class ParentView : UserControl
     {
-        public TeacherView()
+        public ParentView()
         {
             InitializeComponent();
         }
-
-        public TeacherViewModel DataContext { get; internal set; }
     }
 }
