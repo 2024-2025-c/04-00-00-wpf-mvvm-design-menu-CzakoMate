@@ -33,8 +33,21 @@
     </DataTemplate>
     <DataTemplate DataType="{x:Type schoolCitizensViewModels:ParentViewModel}">
         <schoolCitizensView:ParentView/>
-    </DataTemplate>    <DataTemplate DataType="{x:Type schoolGradesViewModels:SchoolGradesViewModel}">
+    </DataTemplate>        <DataTemplate DataType="{x:Type schoolGradesViewModels:SchoolGradesViewModel}">
         <schoolGradesView:SchoolGradesView></schoolGradesView:SchoolGradesView>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type schoolGradesViewModels:CurrentClassViewModel}">
+        <schoolGradesView:CurrentClassView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolGradesViewModels:TeachedClassesViewModel}">
+        <schoolGradesView:TeachedClassesView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolGradesViewModels:SemesterClosingViewModel}">
+        <schoolGradesView:SemesterClosingView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type schoolGradesViewModels:EndOfYearClosingViewModel}">
+        <schoolGradesView:EndOfYearClosingView/>
     </DataTemplate>
 
 </ResourceDictionary>

@@ -85,7 +85,9 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             Caption = "Tantárgyak";
             Icon = IconChar.GraduationCap;
             CurrentChildView = _schoolSubjectsViewModel;
+
         }
+        //schoolGrades menüpont meghívása
         [RelayCommand]
         public void ShowSchoolGrades()
         {
