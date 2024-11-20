@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,5 +24,7 @@ namespace KretaBasicSchoolSystem.Desktop.Views.SchoolCitizens
         {
             InitializeComponent();
         }
+
+        public TeacherViewModel DataContext { get; internal set; }
     }
 }
