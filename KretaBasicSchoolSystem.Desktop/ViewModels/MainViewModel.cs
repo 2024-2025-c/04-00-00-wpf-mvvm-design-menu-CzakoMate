@@ -7,6 +7,7 @@ using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
 using KretaBasicSchoolSystem.Desktop.ViewModels.ShoolGrades;
+using KretaBasicSchoolSystem.Desktop.ViewModels.RestaurantPromotions;
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels
 {
@@ -17,6 +18,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
         private SchoolClassesViewModel _schoolClassesViewModel;
         private SchoolSubjectsViewModel _schoolSubjectsViewModel;
         private SchoolGradesViewModel _schoolGradesViewModel;
+        private RestaurantPromotionsViewModel _restaurantPromotionsViewModel;
 
         public MainViewModel()
         {
@@ -25,6 +27,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             _schoolClassesViewModel = new SchoolClassesViewModel();
             _schoolSubjectsViewModel = new SchoolSubjectsViewModel();
             _schoolGradesViewModel = new SchoolGradesViewModel();
+            _restaurantPromotionsViewModel= new RestaurantPromotionsViewModel();
         }
 
         public MainViewModel(
@@ -32,7 +35,8 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             SchoolCitizensViewModel schoolCitizensViewModel,
             SchoolClassesViewModel schoolClassesViewModel,
             SchoolSubjectsViewModel schoolSubjectsViewModel,
-            SchoolGradesViewModel schoolGradesViewModel
+            SchoolGradesViewModel schoolGradesViewModel,
+            RestaurantPromotionsViewModel restaurantPromotionsViewModel
             )
         {
             _controlPanelViewModel = controlPanelViewModel;
@@ -40,7 +44,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             _schoolClassesViewModel= schoolClassesViewModel;
             _schoolSubjectsViewModel=schoolSubjectsViewModel ;
             _schoolGradesViewModel= schoolGradesViewModel ;
-
+            _restaurantPromotionsViewModel = restaurantPromotionsViewModel ;
 
             CurrentChildView = _controlPanelViewModel;
             ShowDashbord();
@@ -94,6 +98,14 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             Caption = "Osztályzatok";
             Icon = IconChar.FeatherPointed;
             CurrentChildView = _schoolGradesViewModel;
+        }
+        //RestaurantPromotions menüpont meghívása
+        [RelayCommand]
+        public void ShowRestaurantPromotions()
+        {
+            Caption = "Akciók";
+            Icon = IconChar.Percent;
+            CurrentChildView = _restaurantPromotionsViewModel;
         }
     }
 }

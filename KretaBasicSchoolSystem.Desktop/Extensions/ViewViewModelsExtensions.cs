@@ -13,6 +13,8 @@ using KretaBasicSchoolSystem.Desktop.Views.SchoolSubjects;
 using Microsoft.Extensions.DependencyInjection;
 using KretaBasicSchoolSystem.Desktop.ViewModels.ShoolGrades;
 using KretaBasicSchoolSystem.Desktop.Views.SchoolGrades;
+using KretaBasicSchoolSystem.Desktop.ViewModels.RestaurantPromotions;
+using KretaBasicSchoolSystem.Desktop.Views.RestaurantPromotions;
 
 namespace KretaDesktop.Extensions
 {
@@ -109,6 +111,42 @@ namespace KretaDesktop.Extensions
             services.AddSingleton<EndOfYearClosingView>(s => new EndOfYearClosingView()
             {
                 DataContext = s.GetRequiredService<EndOfYearClosingViewModel>()
+            });
+            // Restaurant Promotions
+            services.AddSingleton<RestaurantPromotionsViewModel>();
+            services.AddSingleton<RestaurantPromotionsView>(s => new RestaurantPromotionsView()
+            {
+                DataContext = s.GetRequiredService<RestaurantPromotionsViewModel>()
+            });
+            //AddNewPromotion
+            services.AddSingleton<AddNewPromotionViewModel>();
+            services.AddSingleton<AddNewPromotionView>(s => new AddNewPromotionView()
+            {
+                DataContext = s.GetRequiredService<AddNewPromotionViewModel>()
+            });
+            //CurrentPromotions
+            services.AddSingleton<CurrentPromotionsViewModel>();
+            services.AddSingleton<CurrentPromotionsView>(s => new CurrentPromotionsView()
+            {
+                DataContext = s.GetRequiredService<CurrentPromotionsViewModel>()
+            });
+            //EditCurrentPromotions
+            services.AddSingleton<EditCurrentPromotionsViewModel>();
+            services.AddSingleton<EditCurrentPromotionsView>(s => new EditCurrentPromotionsView()
+            {
+                DataContext = s.GetRequiredService<EditCurrentPromotionsViewModel>()
+            });
+            //PreviousPromotions
+            services.AddSingleton<PreviousPromotionsViewModel>();
+            services.AddSingleton<PreviousPromotionsView>(s => new PreviousPromotionsView()
+            {
+                DataContext = s.GetRequiredService<PreviousPromotionsViewModel>()
+            });
+            //PromotionReports
+            services.AddSingleton<PromotionReportsViewModel>();
+            services.AddSingleton<PromotionReportsView>(s => new PromotionReportsView()
+            {
+                DataContext = s.GetRequiredService<PromotionReportsViewModel>()
             });
         }
     }

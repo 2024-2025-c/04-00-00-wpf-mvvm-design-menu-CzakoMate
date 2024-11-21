@@ -11,6 +11,8 @@
                     xmlns:schoolTeachersView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolClasses"
                     xmlns:schoolGradesViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.ShoolGrades"
                     xmlns:schoolGradesView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.SchoolGrades"
+                    xmlns:restaurantPromotionsViewModels="clr-namespace:KretaBasicSchoolSystem.Desktop.ViewModels.RestaurantPromotions"
+                    xmlns:restaurantPromotionsView="clr-namespace:KretaBasicSchoolSystem.Desktop.Views.RestaurantPromotions"
                     >
     <DataTemplate DataType="{x:Type controlPanelViewModels:ControlPanelViewModel}">
         <controlPanelView:ControlPanelView/>
@@ -50,4 +52,24 @@
         <schoolGradesView:EndOfYearClosingView/>
     </DataTemplate>
 
+
+    <DataTemplate DataType="{x:Type restaurantPromotionsViewModels:RestaurantPromotionsViewModel}">
+        <restaurantPromotionsView:RestaurantPromotionsView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type restaurantPromotionsViewModels:AddNewPromotionViewModel}">
+        <restaurantPromotionsView:AddNewPromotionView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type restaurantPromotionsViewModels:CurrentPromotionsViewModel}">
+        <restaurantPromotionsView:CurrentPromotionsView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type restaurantPromotionsViewModels:EditCurrentPromotionsViewModel}">
+        <restaurantPromotionsView:EditCurrentPromotionsView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type restaurantPromotionsViewModels:PreviousPromotionsViewModel}">
+        <restaurantPromotionsView:PreviousPromotionsView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type restaurantPromotionsViewModels:PromotionReportsViewModel}">
+        <restaurantPromotionsView:PromotionReportsView/>
+    </DataTemplate>
 </ResourceDictionary>
